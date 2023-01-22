@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"><!--resolve problemas de acentuação--><!-- se não funicionar tenta <meta charset="latin" pq pode ser q o navegador interprete latin1-->
+    <title>Felipe S.O. Lima</title><!--tag define o nome da guia no Chome-->
+</head>
+
+<body>
+    <h4>Titulo Pagina</h4><!--titulos em destaque,alteram tbm o tamanho de acordo com o numeno do lado do h no maximo ate o h6-->
+    <br><!--essa tag pula linha-->
+    <a href="http://www.youtube.com.br">youtube</a><!--Ancora, para colocar links-->
+    <print> Felipe S.O. Lima
+    <br>
+    <!-- essa tag script serve para identificar a linguagem JS-->
+    <script>
+        function pularLinha() { //função; cria uma instrução que é executada quando chamada pelo nome ao longo do codigo 
+            document.write("<br>"); //Lembre-se que um bloco é caracterizado por { e }. Tudo que estiver entre as chaves são instruções da função.
+        }
+        function mostra(imprimir) {  // function mostra(imprimir) = função com parametro, ou seja quando o mostra for chamado ele vai colocar a informaçao em imprimir e printar onde for solicitado o mostra, tipo uma var  
+            document.write(imprimir);
+            pularLinha();
+        }
+        var ano = 2020; // var = variavel quando uma variavel é criada pode ser modificada ao longo do codigo sem precisar usar o var novamente 
+        //string é tudo que é escrito entre""
+        //cancatenação é a junção de uma string com um numero por meio do +
+        //alert("isso é JS");                 //exibe uma janela de alerta quando a paginha é acessada 
+        //Math.round(xxxxxx);  significa matematica.arendondamento(var) e aredenda um numero desejado 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        document.write("Soma = ");//escrever no 'mundo' html estando no js
+        pularLinha();
+        document.write(20 + 30 + "R$");// document.write aceita tipo texto usando "" e tipo numero so com usando ()
+        // document.write((20 + 10 +30)/3);   //Media = ((20 + 10 +30)/3) Resutado= 20   // oque esta entre () é solucionado primeiro
+        pularLinha();
+        document.write("Caulculo de porsentagem : "+"eu acertei = " + 15/50*100 + "%");
+        pularLinha();
+        mostra("testando função com parametro");
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                           //solucâo didatica//
+        //function calculaImc(peso, altura) { //funcoes podem receber mais de um parametro 
+            //var imc = peso / (altura * altura);
+                //return imc;    //return - retorna a variavel ou oq for desejado quando a execução for feita (retorna oq é pedido ou oq foi colocado no return em si)
+                // OU   return peso / (altura * altura)  ou seja a var pode ser substituida nesse exemplo, deixando a função mais compacta e objetiva
+        //}
+        //var dadosImc = calculaImc(85, 1.82);
+        //mostra("IMC da Pessoa :" + dadosImc);
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        function calculaImc(altura, peso) {
+            return peso / (altura * altura);
+        }
+        //var nome = prompt("Informe o seu nome");
+        //var alturaInformada = prompt(nome + ", informe sua altura");
+        //var pesoInformado = prompt(nome + ", informe seu peso");
+            //var imc = calculaImc(alturaInformada, pesoInformado);
+                //document.write(nome + ", o seu IMC é " + imc);
+        pularLinha();
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //var vitorias = parseInt(prompt("Entre com o número de vitórias."));  // parseInt - tranforma o texto que no prompt é sempre string em numero, posibilitando contas de +-
+        //var empates = prompt("Entre com o número de empates."); // prompt - por padrao recebem informações em formato de texto 
+            var pontos = vitorias  * 3 + empates;
+                mostra("Os pontos do seu time são " + pontos);
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        
+
+
+    </script>
+</body>
