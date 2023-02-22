@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> <!--resolve problemas de acentuação--><!-- se não funicionar tenta <meta charset="latin" pq pode ser q o navegador interprete latin1-->
+    <title>JOGO ADIVINHA</title> <!--tag define o nome da guia no Chome-->
+    
+</head>
+
+<body>
+    <h4>Adivinhe o número escolhido pela maquina</h4> <!--titulos em destaque,alteram tbm o tamanho de acordo com o numeno do lado do h no maximo ate o h6-->
+    
+    <input/> <!-- Cria uma caixa que armazena informaçoes dadas pelo usurario--><!--entradas pelo usuario-->
+
+    <button> Confirmar </button> <!--Cria um botão-->
+
+    <script>
+
+    var segredo = Math.round(Math.random() * 10);
+    var input = document.querySelector("input"); //document.querySelector == seleciona uma tag do HTML e atribui ela a uma var no JS
+    input.focus();
+
+    function verifica() {
+
+        if(input.value == segredo) {  //input.value == puxa o valor do input 
+        alert("Você ACERTOU!  Parabéns");
+        } else {
+        alert("Você ERROU!  tente novamente");
+        }
+        input.value = ""; //mantem a box limpa depois de uma tentativa
+        input.focus(); //faz a box ja iniciar com o cusor depois de uma tentativa
+    }
+    var button = document.querySelector("button");
+
+    button.onclick = verifica; // button.onclick == ao clicar chamar = funcão/var etc
+                   // obs: função com () é executada, função SEM () é atribuivel/ chama a função 
+
+    </script>
+
+</body>
